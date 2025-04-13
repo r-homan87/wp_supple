@@ -2,6 +2,7 @@
 function add_files() {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('top-style', get_template_directory_uri() . '/css/style_top.css');
+    wp_enqueue_style('concept-style', get_template_directory_uri() . '/css/style_concept.css');
 }
 
 add_action('wp_enqueue_scripts', 'add_files');
