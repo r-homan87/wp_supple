@@ -1,0 +1,55 @@
+/* 
+menu {
+*/
+.menu_main_img {
+    width: 100%;
+    display: block;
+}
+
+.menu_intro {
+    text-align: center;
+}
+
+.menu_intro_title {
+    font-size: 20px;
+    margin: 80px 0 24px;
+}
+
+.menu_list {
+    width: 80%;
+    margin: 48px auto 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.menu_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 3%;
+}
+
+.menu_item_img {
+    width: 25%;
+    object-fit: cover;
+}
+
+.menu_item_content {
+    margin-top: 48px;
+    width: 72%;
+}
+
+.menu_item_name {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.menu_item_price {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.menu_item_details {
+    font-size: 16px;
+    line-height: 1.6;
+}
