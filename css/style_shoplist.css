@@ -1,0 +1,50 @@
+/* 
+shoplist
+*/
+.shoplist_main_img {
+    width: 100%;
+    display: block;
+}
+
+.shopdetail_list {
+    width: 80%;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 99px;
+}
+
+.shopdetail_item {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.shopdetail_img {
+    width: 50%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.shopdetail_info {
+    width: 50%;
+}
+
+.shopdetail_name {
+    font-size: 20px;
+}
+
+.shopdetail_address,
+.shopdetail_time,
+.shopdetail_seats,
+.shopdetail_smoking
+{
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.shopdetail_tel {
+    font-size: 22px;
+    margin: 4px 0;
+}
+
