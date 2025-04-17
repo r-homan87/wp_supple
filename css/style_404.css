@@ -1,7 +1,16 @@
 /* 
 404ページ
 */
+.error_page {
+    text-align: center;
+}
+
 .error_main_img {
     width: 100%;
     display: block;
+}
+
+.error_text {
+    margin-top: 80px;
+    line-height: 2;
 }

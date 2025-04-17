@@ -118,7 +118,29 @@ function create_blog_news_post_type()
             'menu_position' => 6,
             'supports' => array('title', 'editor', 'thumbnail'),
             'show_in_rest' => true,
+            'taxonomies' => array('category'),
+            'rewrite' => array(
+                'slug' => 'blognews',
+                'with_front' => false
+            ),
         )
     );
 }
 add_action('init', 'create_blog_news_post_type');
+
+function modify_category_query_for_blog_news($query)
+{
+    if (!is_admin() && $query->is_main_query() && $query->is_category()) {
+        $query->set('post_type', array('blog_news'));
+    }
+}
+add_action('pre_get_posts', 'modify_category_query_for_blog_news');
+
+
+function change_blog_news_posts_per_page($query)
+{
+    if (!is_admin() && $query->is_main_query() && is_post_type_archive('blog_news')) {
+        $query->set('posts_per_page', 3); // ←ここで件数を調整（今回は3件ずつ）
+    }
+}
+add_action('pre_get_posts', 'change_blog_news_posts_per_page');

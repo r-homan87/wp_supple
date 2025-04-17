@@ -117,7 +117,7 @@ get_header();
                     $custom_image = get_field('custom_image');
                     $news_date = get_field('news_date');
             ?>
-                    <div class="news_item">
+                    <a href="<?php the_permalink(); ?>" class="news_item">
                         <?php if ($custom_image): ?>
                             <img src="<?php echo esc_url($custom_image['url']); ?>" alt="<?php echo esc_attr($custom_image['alt']); ?>">
                         <?php endif; ?>
@@ -136,7 +136,7 @@ get_header();
                         <?php if ($sub_title): ?>
                             <p><?php echo esc_html($sub_title); ?></p>
                         <?php endif; ?>
-                    </div>
+                    </a>
             <?php
                 endwhile;
                 wp_reset_postdata();

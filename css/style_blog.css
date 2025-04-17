@@ -1,7 +1,40 @@
 /* 
 blog
 */
+.archive_blog {
+    margin: 80px auto;
+}
+
 .blog_main_img {
     width: 100%;
     display: block;
+}
+
+.blog_category {
+    margin: 80px auto;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* ページングの個別ボタン */
+.pagination .page-numbers,
+.pagination .prev,
+.pagination .next {
+    display: inline-block;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #000;
+}
+
+/* 現在のページ番号 */
+.pagination .current {
+    background-color: #222;
+    color: white;
 }
