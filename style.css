@@ -30,7 +30,16 @@ a {
   margin: 0 auto;
 }
 
+.sp_only {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
-  .wrapper {
+  .pc_only {
+    display: none;
+  }
+
+  .sp_only {
+    display: block;
   }
 }

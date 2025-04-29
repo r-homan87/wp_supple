@@ -11,15 +11,7 @@
 </div>
 
 <div class="menu_list wrapper">
-    <?php
-    $args = array(
-        'post_type' => 'menu_item',
-        'posts_per_page' => -1
-    );
-    $menu_query = new WP_Query($args);
-
-    if ($menu_query->have_posts()) :
-        while ($menu_query->have_posts()) : $menu_query->the_post();
+    <?php if (have_posts()) : while (have_posts()) : the_post();
             $menu_img = get_field('menu_img');
             $menu_name = get_field('menu_name');
             $price = get_field('price');
@@ -35,13 +27,10 @@
                     <p class="menu_item_details"><?php echo esc_html($menu_details); ?></p>
                 </div>
             </div>
-    <?php
-        endwhile;
-        wp_reset_postdata();
-    else :
-        echo '<p>メニューがまだ登録されていません。</p>';
-    endif;
-    ?>
+        <?php endwhile;
+    else : ?>
+        <p>メニューがまだ登録されていません。</p>
+    <?php endif; ?>
 </div>
 
 <?php get_footer(); ?>

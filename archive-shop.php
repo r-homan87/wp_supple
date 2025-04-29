@@ -4,15 +4,7 @@
 
 <div class="wrapper">
     <div class="shopdetail_list">
-        <?php
-        $args = array(
-            'post_type' => 'shop',
-            'posts_per_page' => -1
-        );
-        $shop_query = new WP_Query($args);
-
-        if ($shop_query->have_posts()) :
-            while ($shop_query->have_posts()) : $shop_query->the_post();
+        <?php if (have_posts()) : while (have_posts()) : the_post();
                 $shop_img = get_field('shop_img');
                 $shop_name = get_field('shop_name');
                 $shop_address = get_field('shop_address');
@@ -35,15 +27,11 @@
                         <p class="shopdetail_smoking">喫煙 / <?php echo esc_html($smoking); ?></p>
                     </div>
                 </div>
-        <?php
-            endwhile;
-            wp_reset_postdata();
-        else :
-            echo '<p>ショップ情報が登録されていません。</p>';
-        endif;
-        ?>
+            <?php endwhile;
+        else : ?>
+            <p>ショップ情報が登録されていません。</p>
+        <?php endif; ?>
     </div>
 </div>
-
 
 <?php get_footer(); ?>

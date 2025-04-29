@@ -6,30 +6,14 @@
     <div class="news_list">
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
-                <?php
-                $sub_title = get_field('sub_title');
-                $custom_image = get_field('custom_image');
-                $news_date = get_field('news_date');
-                ?>
                 <a href="<?php the_permalink(); ?>" class="news_item">
-                    <?php if ($custom_image): ?>
-                        <img src="<?php echo esc_url($custom_image['url']); ?>" alt="<?php echo esc_attr($custom_image['alt']); ?>">
+                    <?php if (has_post_thumbnail()) : ?>
+                        <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title_attribute(); ?>" class="news_item_img">
                     <?php endif; ?>
 
-                    <?php if ($news_date): ?>
-                        <p class="news_date">
-                            <?php
-                            $date = DateTime::createFromFormat('Ymd', $news_date);
-                            echo $date ? $date->format('Y/m/d') : esc_html($news_date);
-                            ?>
-                        </p>
-                    <?php endif; ?>
+                    <p class="news_date"><?php echo get_the_date('Y/m/d'); ?></p>
 
                     <h3><?php the_title(); ?></h3>
-
-                    <?php if ($sub_title): ?>
-                        <p><?php echo esc_html($sub_title); ?></p>
-                    <?php endif; ?>
                 </a>
             <?php endwhile; ?>
 

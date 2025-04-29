@@ -1,27 +1,43 @@
+/* PC共通 */
 .supple_header {
+    padding: 20px 0 15px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header_top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
-}
+  }
 
-.header_logo {
-    margin-left: 20px;
-}
-
-.header_nav_list {
-    display: flex;
-    gap: 30px;
-    font-size: 14px;
-    color: #524433;
-}
-
-.header_nav_list li:last-child a {
+  .online_shop_btn a {
     background-color: #524433;
     color: #fff;
     padding: 13px 16px;
     text-decoration: none;
-}
+    font-size: 14px;
+  }
+  
+  .header_nav_list {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    color: #524433;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .header_nav_list li:last-child a {
+    background-color: #524433;
+    color: white;
+    padding: 10px 16px;
+  }
+
+  /* 表示切り替え */
+  .sp_only {
+    display: none;
+  }
 
 .top_img{
     width: 100%;
@@ -37,6 +53,7 @@
 
 .concept {
     text-align: center;
+    padding: 10px;
 }
 
 .concept_img {
@@ -206,6 +223,9 @@ blog {
 
 .news_item img {
     width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
     margin-bottom: 12px;
 }
 
@@ -283,4 +303,122 @@ footer {
 
 .footer_address {
     margin-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .supple_header {
+        padding: 30px 0 0;
+        flex-direction: column;
+    }
+  
+    .header_top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .header_logo img {
+        width: 60%;
+        margin-left: 20px;
+      }
+    
+      .sp_only {
+        display: block;
+      }
+
+      .header_nav {
+        padding: 15px 0;
+        background-color: #524433;
+      }
+    
+      .header_nav_list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        color: #fff;
+        gap: 0px;
+        margin-left: 10px;
+      }
+
+      .header_nav_list li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        white-space: nowrap;
+        font-size: 14px;
+        color: #fff;
+        padding: 0 9px;
+        margin-left: 13px;
+      }
+
+      .header_nav_list li:last-child a {
+        display: none;
+      }
+    
+      .header_nav_list li:not(:last-child):not(.hide-in-sp)::after {
+        content: "|";
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 14px;
+      }
+
+    /* 最後に非表示にしたい項目にこのクラスを付ける */
+    .header_nav_list li.hide-in-sp {
+        content: "";
+    }
+
+    .menu_columns {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 16px;
+    }
+    
+    .menu_column {
+        width: 100%;
+    }
+
+    .shoplist,
+    .blog {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .shop_card {
+        flex: 1 1 calc(50% - 12px);
+        max-width: calc(50% - 12px);
+    }
+
+    .news_item {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    .concept_img {
+        width: 100%;
+      }
+
+      .black_btn,
+      .white_btn,
+      .instagram_btn {
+        width: 70%;
+        padding: 15px 0;
+      }
+
+      .instagram_imglist {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        overflow-x: unset;
+        justify-items: center;
+      }
+    
+      .instagram_img {
+        width: 100%;
+        flex-shrink: 0;
+      }
 }

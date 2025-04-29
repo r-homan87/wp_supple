@@ -14,6 +14,13 @@ blog
     margin: 80px auto;
 }
 
+.news_item_img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -37,4 +44,43 @@ blog
 .pagination .current {
     background-color: #222;
     color: white;
+}
+
+.blog_single_wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+.blog_single_main_visual {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 24px;
+}
+
+.blog_single_date {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.blog_single_title {
+    font-size: 28px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.blog_single_sub_title {
+    font-size: 20px;
+    color: #666;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.blog_single_content {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    margin-top: 48px;
 }

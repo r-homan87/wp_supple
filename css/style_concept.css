@@ -27,3 +27,13 @@ conceptpage {
     font-size: 16px;
     line-height: 1.8;
 }
+
+@media screen and (max-width: 768px) {
+    .concept_page {
+        padding: 64px 16px;
+    }
+
+    .concept_image {
+        width: 100%;
+    }
+}

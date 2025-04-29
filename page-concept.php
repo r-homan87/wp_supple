@@ -1,5 +1,9 @@
-<?php get_header(); ?>
-
+<?php
+/*
+Template Name: CONCEPT
+*/
+get_header();
+?>
 
 <img src="<?php echo get_template_directory_uri(); ?>/images/page-kv.png" alt="page-kv" class="concept_main_img">
 <div class="concept_page">
@@ -12,6 +16,5 @@
     </p>
     <img src="<?php echo get_template_directory_uri(); ?>/images/pic-consept02 2.png" alt="concept_image_2" class="concept_image">
 </div>
-
 
 <?php get_footer(); ?>

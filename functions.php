@@ -26,31 +26,6 @@ function my_custom_theme_setup()
 }
 add_action('after_setup_theme', 'my_custom_theme_setup');
 
-function create_menu_post_type()
-{
-    register_post_type(
-        'menu',
-        array(
-            'labels' => array(
-                'name' => 'メニュー',
-                'singular_name' => 'メニュー'
-            ),
-            'public' => true,
-            'has_archive' => false,
-            'menu_position' => 5,
-            'supports' => array('title', 'thumbnail'),
-            'show_in_rest' => true,
-        )
-    );
-}
-add_action('init', 'create_menu_post_type');
-
-function add_menu_meta_boxes()
-{
-    add_meta_box('menu_details', 'メニュー詳細', 'menu_meta_box_callback', 'menu', 'normal', 'high');
-}
-add_action('add_meta_boxes', 'add_menu_meta_boxes');
-
 function create_custom_post_type()
 {
     register_post_type(
@@ -62,6 +37,7 @@ function create_custom_post_type()
             ),
             'public' => true,
             'has_archive' => true,
+            'rewrite' => array('slug' => 'menu'),
             'menu_position' => 5,
             'supports' => array('title', 'editor', 'thumbnail'),
             'show_in_rest' => true,
@@ -104,6 +80,9 @@ function create_shop_post_type()
 }
 add_action('init', 'create_shop_post_type');
 
+// サムネイル機能を有効化
+add_theme_support('post-thumbnails');
+
 function create_blog_news_post_type()
 {
     register_post_type(
@@ -118,7 +97,6 @@ function create_blog_news_post_type()
             'menu_position' => 6,
             'supports' => array('title', 'editor', 'thumbnail'),
             'show_in_rest' => true,
-            'taxonomies' => array('category'),
             'rewrite' => array(
                 'slug' => 'blognews',
                 'with_front' => false
