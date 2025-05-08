@@ -8,6 +8,7 @@ function add_files()
     wp_enqueue_style('shoplist-style', get_template_directory_uri() . '/css/style_shoplist.css');
     wp_enqueue_style('blog-style', get_template_directory_uri() . '/css/style_blog.css');
     wp_enqueue_style('error-style', get_template_directory_uri() . '/css/style_404.css');
+    wp_enqueue_style('contact-style', get_template_directory_uri() . '/css/style_contact.css');
 }
 
 add_action('wp_enqueue_scripts', 'add_files');

@@ -17,7 +17,7 @@
             $price = get_field('price');
             $menu_details = get_field('menu_details');
     ?>
-            <div class="menu_item">
+            <div class="menu_block_item">
                 <?php if ($menu_img): ?>
                     <img src="<?php echo esc_url($menu_img['url']); ?>" alt="<?php echo esc_attr($menu_img['alt']); ?>" class="menu_item_img">
                 <?php endif; ?>

@@ -23,9 +23,13 @@ menu {
     gap: 48px;
 }
 
-.menu_item {
+.menu_block_item {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #fff;
 }
 
 .menu_item_img {
@@ -34,7 +38,6 @@ menu {
 }
 
 .menu_item_content {
-    margin-top: 48px;
     width: 72%;
 }
 
@@ -58,9 +61,10 @@ menu {
         width: 90%;
     }
 
-    .menu_item {
-        display: block;
-      }
+    .menu_block_item {
+        display: flex;
+        flex-direction: column;
+    }
     
       .menu_item_img {
         width: 100%;
