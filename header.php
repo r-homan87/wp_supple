@@ -22,15 +22,25 @@
             </div>
         </div>
 
-        <nav class="header_nav">
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'main-menu',
-                'container'      => false,
-                'menu_class'     => 'header_nav_list',
-                'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
-            ));
-            ?>
+        <nav class="header_nav pc_only">
+            <ul class="header_nav_list">
+                <li id="menu-item-106" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-106"><a href="<?php echo esc_url(home_url('/concept')); ?>">CONCEPT</a></li>
+                <li id="menu-item-113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113"><a href="<?php echo esc_url(home_url('/menu')); ?>">MENU</a></li>
+                <li id="menu-item-114" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114"><a href="<?php echo esc_url(home_url('/shop')); ?>">SHOPLIST</a></li>
+                <li id="menu-item-103" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-103"><a href="<?php echo esc_url(home_url('/blognews')); ?>">BLOG&amp;NEWS</a></li>
+                <li id="menu-item-120" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-120"><a href="<?php echo esc_url(home_url('/contact')); ?>">CONTACT</a></li>
+                <li id="menu-item-116" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-116"><a href="<?php echo esc_url(home_url('/')); ?>" aria-current="page">ONLINE SHOP</a></li>
+            </ul>
+        </nav>
+
+        <nav class="header_nav sp_only">
+            <ul class="header_nav_list">
+                <li id="menu-item-106" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-106"><a href="<?php echo esc_url(home_url('/concept')); ?>">CONCEPT</a></li>
+                <li id="menu-item-113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113"><a href="<?php echo esc_url(home_url('/menu')); ?>">MENU</a></li>
+                <li id="menu-item-114" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114"><a href="<?php echo esc_url(home_url('/shop')); ?>">SHOPLIST</a></li>
+                <li id="menu-item-103" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-103"><a href="<?php echo esc_url(home_url('/blognews')); ?>">BLOG&amp;NEWS</a></li>
+                <li id="menu-item-120" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-120"><a href="<?php echo esc_url(home_url('/contact')); ?>">CONTACT</a></li>
+            </ul>
         </nav>
     </header>
     <main>

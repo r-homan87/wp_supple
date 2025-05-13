@@ -123,3 +123,23 @@ function change_blog_news_posts_per_page($query)
     }
 }
 add_action('pre_get_posts', 'change_blog_news_posts_per_page');
+
+add_action('phpmailer_init', function ($phpmailer) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host       = SMTP_HOST;
+    $phpmailer->SMTPAuth   = true;
+    $phpmailer->Port       = SMTP_PORT;
+    $phpmailer->Username   = SMTP_USER;
+    $phpmailer->Password   = SMTP_PASS;
+    $phpmailer->SMTPSecure = SMTP_SECURE;
+    $phpmailer->From       = SMTP_FROM;
+    $phpmailer->FromName   = SMTP_NAME;
+});
+
+add_action('init', function () {
+    if (isset($_GET['mailtest'])) {
+        wp_mail('ryosuke.homan@e-omnibus.co.jp', 'テスト送信', 'これはテストです。');
+        echo '送信しました（たぶん）';
+        exit;
+    }
+});
