@@ -125,6 +125,7 @@ function change_blog_news_posts_per_page($query)
 add_action('pre_get_posts', 'change_blog_news_posts_per_page');
 
 add_action('phpmailer_init', function ($phpmailer) {
+    error_log('phpmailer_init フックが呼ばれた');
     $phpmailer->isSMTP();
     $phpmailer->Host       = SMTP_HOST;
     $phpmailer->SMTPAuth   = true;
@@ -134,12 +135,10 @@ add_action('phpmailer_init', function ($phpmailer) {
     $phpmailer->SMTPSecure = SMTP_SECURE;
     $phpmailer->From       = SMTP_FROM;
     $phpmailer->FromName   = SMTP_NAME;
-});
 
-add_action('init', function () {
-    if (isset($_GET['mailtest'])) {
-        wp_mail('ryosuke.homan@e-omnibus.co.jp', 'テスト送信', 'これはテストです。');
-        echo '送信しました（たぶん）';
-        exit;
-    }
+    // SMTP デバッグ出力を強化
+    $phpmailer->SMTPDebug = 4; // 詳細なデバッグ出力
+    $phpmailer->Debugoutput = function ($str, $level) {
+        error_log("SMTP DEBUG: " . $str);
+    };
 });
