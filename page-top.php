@@ -7,12 +7,12 @@ get_header();
 
 <picture>
     <source media="(max-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/images/bg_top_kv_sp_1.png">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/bg-top-kv 1.png" alt="bg_top" class="top_img">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/bg_top_kv_1.png" alt="bg_top" class="top_img">
 </picture>
 
 <div id="concept" class="concept">
     <h2 class="menu_title">CONCEPT</h2>
-    <img src="<?php echo get_template_directory_uri(); ?>/images/pic-top-consept 2.png" alt="top_concept" class="concept_img">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/pic_top_consept_2.png" alt="top_concept" class="concept_img">
     <h3 class="concept_title">一杯一杯まごころをこめて調製し、新鮮な香りと豊かな 風味のコーヒーを提供します。</h3>
     <p class="concept_description pc_only">親譲りの無鉄砲で小供の時から損ばかりしている。<br>
         小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。<br>
@@ -105,7 +105,7 @@ get_header();
 </div>
 
 <div>
-    <img src="<?php echo get_template_directory_uri(); ?>/images/bg-top-separate 1.png" alt="top_separate" class="top_separate">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/bg_top_separate_1.png" alt="top_separate" class="top_separate">
 </div>
 
 <div id="blog" class="blog wrapper">

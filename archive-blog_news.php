@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<img src="<?php echo get_template_directory_uri(); ?>/images/blog&news.jpg" alt="blog&news" class="blog_main_img">
+<img src="<?php echo get_template_directory_uri(); ?>/images/blog&news.jpg" alt="blog&news" class="blog_main_img pc_only">
+<img src="<?php echo get_template_directory_uri(); ?>/images/sp_blog.jpg" alt="blog&news" class="blog_main_img sp_only">
 
 <div class="blog wrapper blog_category">
     <div class="news_list">

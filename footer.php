@@ -6,14 +6,14 @@
     <div class="wrapper">
         <h2 class="menu_title">INSTAGRAM</h2>
         <div class="instagram_imglist">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/pic-instagram-post.png" alt="instagram_post" class="instagram_img">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/pic-instagram-post02.png" alt="instagram_post02" class="instagram_img">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/pic-instagram-post03.png" alt="instagram_post03" class="instagram_img">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/pic-instagram-post04.png" alt="instagram_post04" class="instagram_img">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/pic-instagram-post05.png" alt="instagram_post05" class="instagram_img">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/pic-instagram-post06.png" alt="instagram_post06" class="instagram_img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/pic_instagram_post.png" alt="instagram_post" class="instagram_img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/pic_instagram_post02.png" alt="instagram_post02" class="instagram_img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/pic_instagram_post03.png" alt="instagram_post03" class="instagram_img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/pic_instagram_post04.png" alt="instagram_post04" class="instagram_img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/pic_instagram_post05.png" alt="instagram_post05" class="instagram_img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/pic_instagram_post06.png" alt="instagram_post06" class="instagram_img">
         </div>
-        <a href="https://www.instagram.com/" class="instagram_btn" target="brank">INSTAGRAM</a>
+        <a href="https://www.instagram.com/" class="instagram_btn" target="_brank">INSTAGRAM</a>
     </div>
 </div>
 

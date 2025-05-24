@@ -63,6 +63,15 @@
     background-color: #43a047;
 }
 
+.button {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.button br {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
     .contact {
         padding: 24px 16px;

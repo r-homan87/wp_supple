@@ -33,6 +33,10 @@ a {
   margin: 0 auto;
 }
 
+.pc_only {
+  display: block;
+}
+
 .sp_only {
   display: none;
 }

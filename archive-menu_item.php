@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<img src="<?php echo get_template_directory_uri(); ?>/images/page-kv.jpg" alt="page-kv" class="menu_main_img">
+<img src="<?php echo get_template_directory_uri(); ?>/images/page_kv.jpg" alt="page-kv" class="menu_main_img pc_only">
+<img src="<?php echo get_template_directory_uri(); ?>/images/sp_menu.jpg" alt="page-kv" class="menu_main_img sp_only">
 
 <div class="menu_intro wrapper">
     <h2 class="menu_intro_title">使用しているコーヒー豆を紹介します</h2>

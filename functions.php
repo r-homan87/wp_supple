@@ -119,7 +119,7 @@ add_action('pre_get_posts', 'modify_category_query_for_blog_news');
 function change_blog_news_posts_per_page($query)
 {
     if (!is_admin() && $query->is_main_query() && is_post_type_archive('blog_news')) {
-        $query->set('posts_per_page', 3); // ←ここで件数を調整（今回は3件ずつ）
+        $query->set('posts_per_page', 12);
     }
 }
 add_action('pre_get_posts', 'change_blog_news_posts_per_page');
